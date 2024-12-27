@@ -1,0 +1,199 @@
+/* PosTicket.css */
+.active-tab {
+  background-color: #007bff;
+  /* Primary color */
+  color: white;
+  /* Text color for active tab */
+  border-color: #007bff;
+  /* Border color for active tab */
+}
+
+/* Optionally, you can customize the hover and focus states */
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #0c1cac;
+  color: #e8e8e9;
+}
+
+/* ใช้ Flexbox เพื่อจัดการขนาดการ์ดให้เท่ากัน */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  flex: 1 1 calc(50% - 1rem);
+  /* ขนาดการ์ดกว้าง 50% ของคอลัมน์พร้อมกับการเว้นระยะ 1rem */
+  margin: 0.5rem;
+  /* เว้นระยะระหว่างการ์ด */
+}
+
+.card1 {
+  /* display: flex; */
+  flex-direction: column;
+  /* จัดเรียงเนื้อหาภายในการ์ดให้เรียงตามแนวตั้ง */
+  justify-content: center;
+  /* จัดให้อยู่กลาง */
+  align-items: center;
+  /* จัดให้อยู่กลาง */
+  height: 110px;
+  /* กำหนดความสูงของการ์ด */
+  min-height: 120px;
+  /* กำหนดความสูงขั้นต่ำของการ์ด */
+
+  color: black;
+  /* สีข้อความภายในการ์ด */
+  border: none;
+  /* ไม่ใช้ขอบการ์ด */
+}
+
+
+.wrapper {
+  display: inline-flex;
+  background: #fff;
+  height: 100px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 15px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .option {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+
+.wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+
+.wrapper .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #0069d9;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#option-1:checked:checked~.option-1,
+#option-2:checked:checked~.option-2 {
+  border-color: #0069d9;
+  background: #0069d9;
+}
+
+#option-1:checked:checked~.option-1 .dot,
+#option-2:checked:checked~.option-2 .dot {
+  background: #fff;
+}
+
+#option-1:checked:checked~.option-1 .dot::before,
+#option-2:checked:checked~.option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.wrapper .option span {
+  font-size: 20px;
+  color: #808080;
+}
+
+#option-1:checked:checked~.option-1 span,
+#option-2:checked:checked~.option-2 span {
+  color: #fff;
+}
+
+
+.btn {
+  font-size: 1rem;
+  /* ขนาดตัวอักษร */
+  transition: all 0.3s ease;
+  /* เพิ่มเอฟเฟกต์ hover */
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  /* ขยายเล็กน้อยเมื่อ hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* เพิ่มเงา */
+}
+
+.rounded-pill {
+  border-radius: 50px;
+  /* มุมโค้งมนเหมือนแคปซูล */
+}
+
+
+.dropdown-menu {
+  max-height: 200px;
+  /* จำกัดความสูงของเมนู */
+  overflow-y: auto;
+  /* เลื่อนเมนูเมื่อรายการเกิน */
+}
+
+.dropdown-item.active {
+  background-color: #0d6efd;
+  /* สีพื้นหลังเมนูที่เลือก */
+  color: white;
+  /* สีตัวอักษรเมื่อเลือก */
+  font-weight: bold;
+  /* ตัวหนา */
+}
+
+
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  border-radius: 110%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+}
+
+.floating-card {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1049;
+}
+
+

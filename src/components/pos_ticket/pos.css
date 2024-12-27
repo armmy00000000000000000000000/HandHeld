@@ -1,0 +1,106 @@
+.container {
+    overflow-y: hidden;
+    /* Hide vertical scrollbar */
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 370px) {
+    .side_total {
+        margin-top: 5px;
+        height: 29vh;
+        /* background-color: #999; */
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    .pos_container {
+        margin-bottom: 5px;
+        height: 70vh;
+        width: 100%;
+        border: 1px solid #000000;
+        border-radius: 10px;
+    }
+
+    .data-list {
+        background: #ffffff;
+        padding: 0;
+        margin: 0px 0px;
+
+    }
+
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .side_total {
+        /* height: 100vh;                                                                                           background-color: #999; */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 33%;
+        min-height: 100vh;
+        border: none;
+        border-radius: none;
+    }
+
+    .pos_container {
+        margin-bottom: 5px;
+        height: 100vh;
+        width: 100%;
+        border: none;
+        border-radius: none;
+        /* border: 1px solid #000000;                      
+                    border-radius: 10px; */
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+}
+
+.pos_container {
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#club_id {
+    display: none;
+}
+
+
+.info-box .info-box-text,
+.info-box .progress-description {
+    white-space: normal;
+}
+
+input[type="radio"] {
+    display: none;
+
+    &:checked {
+        +.box {
+            background-color: #007e90;
+            span {
+                color: white;
+            }
+        }
+    }
+}
+.box {
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+
+    span {
+        user-select: none;
+        color: #007e90;
+    }
+}

@@ -1,0 +1,19 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ทำให้ข้อความอยู่กลางหน้า */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    color: #007bff; /* เปลี่ยนสีข้อความ */
+    font-weight: bold; /* ทำให้ตัวหนา */
+    animation: fadeIn 1s; /* เพิ่มเอฟเฟกต์ fade-in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
